@@ -5,7 +5,7 @@ has_subscription = True
 
 print("Есть ли статья для отображения: ", bool(post_text))
 
-can_show = post_text and is_published and (is_premium  or has_subscription)
+can_show = post_text and is_published and (not is_premium  or has_subscription)
 
 if can_show:
     print(f"Показываем текст: {post_text}")
